@@ -1,4 +1,5 @@
 using Models.Music;
+using PlayGround.Extensions;
 using Seido.Utilities.SeedGenerator;
 
 namespace Playground.Lesson02;
@@ -10,6 +11,11 @@ public static class Excericee0201
         System.Console.WriteLine("=== LINQ Music Groups Exercises ===\n");
         var seedGenerator = new SeedGenerator();
         var musicgroups = seedGenerator.ItemsToList<MusicGroup>(50);
+    
+        //See how clean it becomes when I made the Serialization to Json
+        //musicgroups.SerializeJson("musicgroups.json");
+        //musicgroups = musicgroups.DeSerializeJson("musicgroups.json");
+
 
         // EASY: Basic Filtering & Projection (Questions 1-3)
         
